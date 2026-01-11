@@ -16,8 +16,12 @@ public class FileUtil {
      * @param filePath the path to the file
      * @return the file contents as a byte array
      * @throws IOException if an I/O error occurs
+     * @throws IllegalArgumentException if filePath is null or empty
      */
     public static byte[] readFile(String filePath) throws IOException {
+        if (filePath == null || filePath.trim().isEmpty()) {
+            throw new IllegalArgumentException("File path cannot be null or empty");
+        }
         Path path = Path.of(filePath);
         return Files.readAllBytes(path);
     }
@@ -28,8 +32,15 @@ public class FileUtil {
      * @param filePath the path to the file
      * @param data the data to write
      * @throws IOException if an I/O error occurs
+     * @throws IllegalArgumentException if filePath is null or empty, or if data is null
      */
     public static void writeFile(String filePath, byte[] data) throws IOException {
+        if (filePath == null || filePath.trim().isEmpty()) {
+            throw new IllegalArgumentException("File path cannot be null or empty");
+        }
+        if (data == null) {
+            throw new IllegalArgumentException("Data cannot be null");
+        }
         Path path = Path.of(filePath);
         Files.write(path, data);
     }

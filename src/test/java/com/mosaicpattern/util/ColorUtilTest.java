@@ -37,4 +37,18 @@ public class ColorUtilTest {
         assertFalse(ColorUtil.isValidRGB(0, 256, 0));
         assertFalse(ColorUtil.isValidRGB(0, 0, 300));
     }
+
+    @Test
+    public void testRgbToHexWithInvalidInput() {
+        assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToHex(-1, 0, 0));
+        assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToHex(0, 256, 0));
+        assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToHex(0, 0, 300));
+    }
+
+    @Test
+    public void testRgbToGrayscaleWithInvalidInput() {
+        assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToGrayscale(-1, 0, 0));
+        assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToGrayscale(0, 256, 0));
+        assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToGrayscale(0, 0, 300));
+    }
 }
