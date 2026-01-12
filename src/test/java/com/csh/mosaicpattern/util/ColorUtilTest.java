@@ -7,15 +7,13 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
-import com.csh.mosaicpattern.util.ColorUtil;
-
 /**
  * Test class for ColorUtil.
  */
-public class ColorUtilTest {
+class ColorUtilTest {
 
     @Test
-    public void testRgbToHex() {
+    void testRgbToHex() {
         assertEquals("#FF0000", ColorUtil.rgbToHex(255, 0, 0));
         assertEquals("#00FF00", ColorUtil.rgbToHex(0, 255, 0));
         assertEquals("#0000FF", ColorUtil.rgbToHex(0, 0, 255));
@@ -24,7 +22,7 @@ public class ColorUtilTest {
     }
 
     @Test
-    public void testRgbToGrayscale() {
+    void testRgbToGrayscale() {
         int grayscale = ColorUtil.rgbToGrayscale(100, 100, 100);
         assertEquals(100, grayscale);
 
@@ -34,7 +32,7 @@ public class ColorUtilTest {
     }
 
     @Test
-    public void testIsValidRGB() {
+    void testIsValidRGB() {
         assertTrue(ColorUtil.isValidRGB(0, 0, 0));
         assertTrue(ColorUtil.isValidRGB(255, 255, 255));
         assertTrue(ColorUtil.isValidRGB(128, 128, 128));
@@ -45,14 +43,14 @@ public class ColorUtilTest {
     }
 
     @Test
-    public void testRgbToHexWithInvalidInput() {
+    void testRgbToHexWithInvalidInput() {
         assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToHex(-1, 0, 0));
         assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToHex(0, 256, 0));
         assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToHex(0, 0, 300));
     }
 
     @Test
-    public void testRgbToGrayscaleWithInvalidInput() {
+    void testRgbToGrayscaleWithInvalidInput() {
         assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToGrayscale(-1, 0, 0));
         assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToGrayscale(0, 256, 0));
         assertThrows(IllegalArgumentException.class, () -> ColorUtil.rgbToGrayscale(0, 0, 300));

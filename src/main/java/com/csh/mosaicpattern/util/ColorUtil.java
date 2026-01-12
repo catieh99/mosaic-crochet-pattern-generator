@@ -1,8 +1,12 @@
 package com.csh.mosaicpattern.util;
 
+import javafx.scene.paint.Color;
+import lombok.experimental.UtilityClass;
+
 /**
  * Utility class for color conversions and manipulations.
  */
+@UtilityClass
 public class ColorUtil {
 
     /**
@@ -47,5 +51,19 @@ public class ColorUtil {
      */
     public static boolean isValidRGB(int red, int green, int blue) {
         return red >= 0 && red <= 255 && green >= 0 && green <= 255 && blue >= 0 && blue <= 255;
+    }
+
+    public String toHexString(Color color) {
+        return String.format("#%02X%02X%02X",
+                (int) (color.getRed() * 255),
+                (int) (color.getGreen() * 255),
+                (int) (color.getBlue() * 255));
+    }
+
+    public String toRgbString(Color color) {
+        return String.format("%d, %d, %d",
+                (int) (color.getRed() * 255),
+                (int) (color.getGreen() * 255),
+                (int) (color.getBlue() * 255));
     }
 }

@@ -1,31 +1,23 @@
 package com.csh.mosaicpattern.backend;
 
+import java.awt.color.ColorSpace;
+import java.awt.image.BufferedImage;
+import java.awt.image.ColorConvertOp;
+
 /**
  * Service class for processing and manipulating images.
  */
 public class ImageProcessor {
 
     /**
-     * Processes an image by resizing it to the specified dimensions.
+     * Converts the given image to grayscale.
      *
-     * @param imageData the input image data
-     * @param width     the target width
-     * @param height    the target height
-     * @return the processed image data
+     * @param image the input image
+     * @return the grayscale image
      */
-    public byte[] resizeImage(byte[] imageData, int width, int height) {
-        // Placeholder for image resizing logic
-        return imageData;
-    }
-
-    /**
-     * Converts an image to grayscale.
-     *
-     * @param imageData the input image data
-     * @return the grayscale image data
-     */
-    public byte[] convertToGrayscale(byte[] imageData) {
-        // Placeholder for grayscale conversion logic
-        return imageData;
+    public BufferedImage convertToGrayscale(BufferedImage image) {
+        ColorSpace cs = ColorSpace.getInstance(ColorSpace.CS_GRAY);
+        ColorConvertOp op = new ColorConvertOp(cs, null);
+        return op.filter(image, null);
     }
 }

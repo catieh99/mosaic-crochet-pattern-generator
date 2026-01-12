@@ -5,9 +5,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 
+import lombok.experimental.UtilityClass;
+
 /**
  * Utility class for file operations.
  */
+@UtilityClass
 public class FileUtil {
 
     /**

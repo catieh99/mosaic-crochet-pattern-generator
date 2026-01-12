@@ -1,9 +1,9 @@
 package com.csh.mosaicpattern;
 
+import com.csh.mosaicpattern.ui.PatternGeneratorView;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
@@ -15,13 +15,9 @@ public class MosaicPatternApp extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Mosaic Crochet Pattern Generator");
 
-        Label welcomeLabel = new Label("Welcome to Mosaic Crochet Pattern Generator");
-        welcomeLabel.setStyle("-fx-font-size: 16px; -fx-padding: 20px;");
+        PatternGeneratorView root = new PatternGeneratorView();
 
-        StackPane root = new StackPane();
-        root.getChildren().add(welcomeLabel);
-
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene = new Scene(root, 800, 600);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
