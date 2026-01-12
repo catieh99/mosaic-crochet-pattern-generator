@@ -1,4 +1,4 @@
-package com.mosaicpattern.util;
+package com.csh.mosaicpattern.util;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +15,7 @@ public class FileUtil {
      *
      * @param filePath the path to the file
      * @return the file contents as a byte array
-     * @throws IOException if an I/O error occurs
+     * @throws IOException              if an I/O error occurs
      * @throws IllegalArgumentException if filePath is null or empty
      */
     public static byte[] readFile(String filePath) throws IOException {
@@ -30,9 +30,10 @@ public class FileUtil {
      * Writes a byte array to a file.
      *
      * @param filePath the path to the file
-     * @param data the data to write
-     * @throws IOException if an I/O error occurs
-     * @throws IllegalArgumentException if filePath is null or empty, or if data is null
+     * @param data     the data to write
+     * @throws IOException              if an I/O error occurs
+     * @throws IllegalArgumentException if filePath is null or empty, or if data is
+     *                                  null
      */
     public static void writeFile(String filePath, byte[] data) throws IOException {
         if (filePath == null || filePath.trim().isEmpty()) {

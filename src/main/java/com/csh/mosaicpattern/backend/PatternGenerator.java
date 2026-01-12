@@ -1,4 +1,4 @@
-package com.mosaicpattern.backend;
+package com.csh.mosaicpattern.backend;
 
 /**
  * Service class for processing images and generating mosaic crochet patterns.

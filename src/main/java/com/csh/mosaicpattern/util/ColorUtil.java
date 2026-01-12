@@ -1,4 +1,4 @@
-package com.mosaicpattern.util;
+package com.csh.mosaicpattern.util;
 
 /**
  * Utility class for color conversions and manipulations.
@@ -8,9 +8,9 @@ public class ColorUtil {
     /**
      * Converts RGB values to a hex color string.
      *
-     * @param red the red component (0-255)
+     * @param red   the red component (0-255)
      * @param green the green component (0-255)
-     * @param blue the blue component (0-255)
+     * @param blue  the blue component (0-255)
      * @return the hex color string (e.g., "#FF0000" for red)
      * @throws IllegalArgumentException if any RGB value is out of range [0, 255]
      */
@@ -24,9 +24,9 @@ public class ColorUtil {
     /**
      * Calculates the grayscale value from RGB components.
      *
-     * @param red the red component (0-255)
+     * @param red   the red component (0-255)
      * @param green the green component (0-255)
-     * @param blue the blue component (0-255)
+     * @param blue  the blue component (0-255)
      * @return the grayscale value (0-255)
      * @throws IllegalArgumentException if any RGB value is out of range [0, 255]
      */
@@ -40,9 +40,9 @@ public class ColorUtil {
     /**
      * Validates if RGB values are within the valid range.
      *
-     * @param red the red component
+     * @param red   the red component
      * @param green the green component
-     * @param blue the blue component
+     * @param blue  the blue component
      * @return true if all values are in range [0, 255], false otherwise
      */
     public static boolean isValidRGB(int red, int green, int blue) {

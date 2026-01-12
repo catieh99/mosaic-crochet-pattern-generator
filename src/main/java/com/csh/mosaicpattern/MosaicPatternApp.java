@@ -1,4 +1,4 @@
-package com.mosaicpattern;
+package com.csh.mosaicpattern;
 
 import javafx.application.Application;
 import javafx.scene.Scene;

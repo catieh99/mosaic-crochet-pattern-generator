@@ -1,4 +1,4 @@
-package com.mosaicpattern.ui;
+package com.csh.mosaicpattern.ui;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

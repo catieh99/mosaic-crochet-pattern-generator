@@ -1,7 +1,13 @@
-package com.mosaicpattern.util;
+package com.csh.mosaicpattern.util;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import com.csh.mosaicpattern.util.ColorUtil;
 
 /**
  * Test class for ColorUtil.
@@ -32,7 +38,7 @@ public class ColorUtilTest {
         assertTrue(ColorUtil.isValidRGB(0, 0, 0));
         assertTrue(ColorUtil.isValidRGB(255, 255, 255));
         assertTrue(ColorUtil.isValidRGB(128, 128, 128));
-        
+
         assertFalse(ColorUtil.isValidRGB(-1, 0, 0));
         assertFalse(ColorUtil.isValidRGB(0, 256, 0));
         assertFalse(ColorUtil.isValidRGB(0, 0, 300));
